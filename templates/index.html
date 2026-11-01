@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+   <meta charset ="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <tutle >
+        HOUSE PRICE PREDICTOR
+    </title>
+
+    <link rel = "stylesheet" href ="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+
+</head>
+
+
+<body>
+    <div class ="container">
+
+        <h1>🏠 House Price Predictor</h1>
+          <p class="subtitle">
+        Predict house prices using Machine Learning
+    </p>
+
+        <form action ="/predict" method ="POST">
+
+            <div class="input-group"></div>
+            <label>Average Area Income</label>
+            <input type ="number" step="any" name ="income" required placeholder="e.g. 65000">
+            </div>
+
+            <div class="input-group">
+            <label>House age</label>
+            <input type ="number" step="any" name ="house_age" required placeholder="e.g. 5">
+            </div>
+
+            
+            <div class="input-group">
+            <label>Number of rooms</label>
+            <input type ="number" step="any" name ="rooms" required placeholder="e.g. 7">
+            </div>
+
+            <div class="input-group">
+            <label>Number of bedrooms</label>
+            <input type ="number" step="any" name ="bedrooms" required placeholder="e.g. 4">
+            </div>
+
+            <div class="input-group">
+            <label>Area population</label>
+            <input type ="number" step="any" name ="population" required placeholder="e.g. 35000">
+            </div>
+
+            <button type ="submit">
+                Predict House Price
+            </button>
+
+            <button type="reset" class="reset-button">
+    Clear
+</button>
+            </form>
+
+            {% if error %}
+
+<div class="error-card">
+    {{ error }}
+</div>
+
+{% endif %}
+
+{% if prediction %}
+ <div class ="prediction-card">
+    <h3>Estimated House Price</h3>
+    <h2>{{ prediction }}</h2>
+
+
+ </div>
+{% endif %}
+</div>
+</body>
+</html>            

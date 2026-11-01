@@ -1,0 +1,348 @@
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* ================================
+   PAGE BACKGROUND
+================================ */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a,
+        #2563eb
+    );
+}
+
+
+/* ================================
+   MAIN GLASS CARD
+================================ */
+
+.container {
+    width: 100%;
+    max-width: 550px;
+
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+    color: white;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+h1 {
+    text-align: center;
+
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+}
+
+
+.subtitle {
+    text-align: center;
+
+    color: #dbeafe;
+
+    margin-bottom: 30px;
+
+    font-size: 15px;
+}
+
+
+/* ================================
+   INPUT GROUP
+================================ */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 500;
+}
+
+
+/* ================================
+   INPUT FIELDS
+================================ */
+
+input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid transparent;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+
+input::placeholder {
+    color: #d1d5db;
+}
+
+
+input:focus {
+    background: rgba(255, 255, 255, 0.22);
+
+    border-color: #60a5fa;
+
+    box-shadow: 0 0 12px rgba(96, 165, 250, 0.6);
+}
+
+
+/* ================================
+   PREDICT BUTTON
+================================ */
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #3b82f6,
+        #6366f1
+    );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Button hover */
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.5);
+}
+
+
+/* Button click */
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* ================================
+   PREDICTION RESULT
+================================ */
+
+.prediction-card {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    animation: fadeIn 0.5s ease;
+}
+
+
+.prediction-card h3 {
+    font-size: 15px;
+
+    font-weight: 400;
+
+    color: #dbeafe;
+
+    margin-bottom: 8px;
+}
+
+
+.prediction-card h2 {
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: white;
+}
+
+
+/* ================================
+   RESULT ANIMATION
+================================ */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+
+    .container {
+        padding: 25px;
+    }
+
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+
+    .prediction-card h2 {
+        font-size: 1.6rem;
+    }
+}
+
+.reset-button {
+    margin-top: 10px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reset-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+
+    box-shadow: none;
+}
+
+/* ================================
+   ERROR MESSAGE
+================================ */
+
+.error-card {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    background: rgba(239, 68, 68, 0.2);
+
+    border: 1px solid rgba(239, 68, 68, 0.4);
+
+    color: #fecaca;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   CLEAR BUTTON
+================================ */
+
+.reset-button {
+    display: block;
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 10px;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    color: white;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.reset-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+
+    transform: translateY(-2px);
+}
